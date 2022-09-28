@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class time
+{
+private:
+    int h,m,s;
+public:
+    void settime(int x,int y,int z)
+    {
+        h=x;
+        m=y;
+        s=z;
+    }
+    void showtime()
+    {
+        cout<<"hours : "<<h<<"  minutes : "<<m<<" seconds : "<<s<<endl;
+    }
+    time add(time t)
+    {
+        time temp;
+        temp.s=s+t.s;
+        temp.m=m+t.m+(temp.s/60);
+        temp.h=h+t.h+(temp.m/60);
+        temp.m=temp.m%60;
+        temp.s=temp.s%60;
+        return temp;
+    }
+    void normalize()
+    {
+
+        cout<<h<<":"<<m<<":"<<s<<endl;
+    }
+};
+int main()
+{
+    time t1,t2,t3,t4;
+    t1.settime(2,30,40);
+    t2.settime(3,40,50);
+    t3.settime(4,60,40);
+    t4=t3.add(t2);
+    t1.showtime();
+    t2.showtime();
+    t3.showtime();
+    t4.showtime();
+    t1.normalize();
+    t2.normalize();
+    t3.normalize();
+    t4.normalize();
+}
+
+

@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class cube
+{
+private:
+    int l,b,h;
+public:
+    cube(int x)
+    {
+        l=x;
+        b=x;
+        h=x;
+    }
+    void printvolume()
+    {
+        float v;
+        v=l*b*h;
+        cout<<"Volume of cube is = "<<v<<endl;
+    }
+};
+int main()
+{
+    cube c1(1),c2(2),c3(3);
+    c1.printvolume();
+    c2.printvolume();
+    c3.printvolume();
+}

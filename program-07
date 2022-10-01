@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class box
+{
+private:
+    int l,b,h;
+public:
+    box(int x,int y,int z)
+    {
+        l=x;
+        b=y;
+        h=z;
+    }
+    void findvolume()
+    {
+        float v;
+        v=l*b*h;
+        cout<<" volume of the box with dimension "<<l<<"*"<<b<<"*"<<h<<" is : = "<<v<<endl;
+    }
+};
+int main()
+{
+    box b1(3,4,5),b2(6,4,9);
+    b1.findvolume();
+    b2.findvolume();
+}

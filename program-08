@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class bank
+{
+private:
+    double pncl,roi,year,si;
+public:
+    bank(double p,double r,double t)
+    {
+        pncl=p;
+        roi=r;
+        year=t;
+    }
+    void findsimpleinterest()
+    {
+        si=(pncl*roi*year)/100;
+        cout<<"Simple Interest = "<<si<<endl;
+    }
+};
+int main()
+{
+    bank b(33000,2.5,6);
+    b.findsimpleinterest();
+return 0;
+}

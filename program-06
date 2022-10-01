@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class student
+{
+private:
+    int rollno,age;
+    string name;
+public:
+    student(int r,int a,string s)
+    {
+        rollno=r;
+        age=a;
+        name=s;
+    }
+    void showdetails()
+    {
+        cout<<rollno<<"\t"<<name<<"\t"<<age<<endl;
+    }
+};
+int main()
+{
+    student s1(12017037,20,"MOHIT"),s2(12017036,20,"MAYANK"),s3(12017032,21,"YASH");
+    cout<<"ROLL NO."<<"\t"<<"NAME"<<"\t"<<"AGE"<<endl;
+    s1.showdetails();
+    s2.showdetails();
+    s3.showdetails();
+}

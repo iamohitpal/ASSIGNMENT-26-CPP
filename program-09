@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class bill
+{
+private:
+    string name,area,houseno;
+    float reading,payment;
+public:
+    void getdetails()
+    {
+        cout<<"\n------------------------"<<"\n\n";
+        cout<<"Enter Name        - ";
+        getline(cin,name);
+        cout<<"Enter Address     - ";
+        getline(cin,area);
+        cout<<"Enter House no.   - ";
+        getline(cin,houseno);
+        cout<<"Enter Reading     - ";
+        cin>>reading;
+        cout<<"\n\n";
+    }
+   float calculatebill()
+    {
+        if(reading<=100)
+        {
+            payment=(reading*1.20);
+        }
+        else if(reading>100&&reading<=200)
+        {
+            payment=((reading-100)*2)+120;
+        }
+        else
+        {
+            payment=((reading-200)*3)+320;
+        }
+        return payment;
+    }
+    void showbill()
+    {
+        cout<<"bill is generated :--"<<"\n\n";
+        cout<<"NAME OF OWNER  "<<"\t\t\t"<<"LOCALITY "<<"\t\t\t"<<"HOUSE NO"<<"\t\t"<<"READINGS"<<"\t\t"<<"BILL "<<endl;
+        cout<<name<<"\t\t\t"<<area<<"\t\t\t"<<houseno<<"\t\t\t"<<reading<<"\t\t\t"<<payment<<endl;
+    }
+};
+int main()
+{
+    bill p1;
+    p1.getdetails();
+    p1.calculatebill();
+    p1.showbill();
+}

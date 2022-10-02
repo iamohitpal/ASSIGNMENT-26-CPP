@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class StaticCount
+{
+private:
+    static int cnt;
+public:
+    static void counter()
+    {
+        cnt++;
+        cout<<" function calling "<<cnt<<" time "<<endl;
+    }
+};
+int StaticCount :: cnt;
+int main()
+{
+    StaticCount c1,c2,c3;
+    c1.counter();
+    c2.counter();
+    c3.counter();
+}
+
